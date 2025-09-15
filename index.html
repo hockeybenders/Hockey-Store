@@ -2,44 +2,54 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hockey Store</title>
+  <title>Hockey Store - Tape de Hockey</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>🏒 Bienvenue sur Hockey Store 🏒</h1>
-    <p>Ta mini-boutique de hockey en ligne !</p>
+    <h1>🏒 Hockey Store</h1>
+    <div id="cart-box">
+      🛒 Panier : <span id="cart-count">0</span>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Produits</h2>
+    <h2>Nos produits</h2>
+    <div class="product-list">
       <div class="product">
-        <h3>Bâton de hockey</h3>
-        <p>Un bâton solide pour tous tes matchs.</p>
-        <button>Ajouter au panier</button>
+        <h3>Tape Transparent</h3>
+        <p>Durable et parfait pour les patins.</p>
+        <p class="price">4.99 $</p>
+        <button onclick="addToCart('Tape Transparent', 4.99)">Ajouter au panier</button>
       </div>
-      <div class="product">
-        <h3>Chandail d'équipe</h3>
-        <p>Montre tes couleurs sur la glace.</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <div class="product">
-        <h3>Rondelle</h3>
-        <p>Indispensable pour commencer la partie.</p>
-        <button>Ajouter au panier</button>
-      </div>
-    </section>
 
-    <section>
-      <h2>Biography</h2>
-      <p>Je suis un jeune passionné de hockey 🏒. Ce site est mon projet pour partager mon enthousiasme pour ce sport incroyable et apprendre à coder.</p>
-    </section>
+      <div class="product">
+        <h3>Grip Tape (Noir)</h3>
+        <p>Excellente adhérence pour ton bâton.</p>
+        <p class="price">5.99 $</p>
+        <button onclick="addToCart('Grip Tape Noir', 5.99)">Ajouter au panier</button>
+      </div>
+
+      <div class="product">
+        <h3>Grip Tape (Couleurs)</h3>
+        <p>Disponible en rouge, bleu, vert, jaune.</p>
+        <p class="price">6.99 $</p>
+        <button onclick="addToCart('Grip Tape Couleurs', 6.99)">Ajouter au panier</button>
+      </div>
+
+      <div class="product">
+        <h3>Tape à Bâton (Blanc)</h3>
+        <p>Classique et indispensable pour tout joueur.</p>
+        <p class="price">3.99 $</p>
+        <button onclick="addToCart('Tape à Bâton Blanc', 3.99)">Ajouter au panier</button>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Hockey Store - Projet amateur</p>
+    <p>© 2025 Hockey Store - Tous droits réservés.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
