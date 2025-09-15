@@ -2,53 +2,71 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Hockey Store - Tape de Hockey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HockeyBenders</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>🏒 Hockey Store</h1>
-    <div id="cart-box">
-      🛒 Panier : <span id="cart-count">0</span>
-    </div>
+    <h1>HockeyBenders - Boutique en ligne</h1>
   </header>
 
   <main>
-    <h2>Nos produits</h2>
-    <div class="product-list">
-      <div class="product">
-        <h3>Tape Transparent</h3>
-        <p>Durable et parfait pour les patins.</p>
-        <p class="price">4.99 $</p>
-        <button onclick="addToCart('Tape Transparent', 4.99)">Ajouter au panier</button>
-      </div>
+    <section class="product">
+      <h2>Tape Transparent (pour jambières)</h2>
+      <label>Quantité :</label>
+      <select class="quantity" data-name="Tape Transparent" data-type="transparent">
+        <option value="4" data-price="10">Paquet de 4 - 10$</option>
+        <option value="6" data-price="20">Paquet de 6 - 20$</option>
+        <option value="12" data-price="35">Paquet de 12 - 35$</option>
+      </select>
+      <button class="add-to-cart">Ajouter au panier</button>
+    </section>
 
-      <div class="product">
-        <h3>Grip Tape (Noir)</h3>
-        <p>Excellente adhérence pour ton bâton.</p>
-        <p class="price">5.99 $</p>
-        <button onclick="addToCart('Grip Tape Noir', 5.99)">Ajouter au panier</button>
-      </div>
+    <section class="product">
+      <h2>Tape à Bâton</h2>
+      <label>Couleur :</label>
+      <select class="color">
+        <option value="noir">Noir</option>
+        <option value="blanc">Blanc</option>
+      </select>
+      <label>Quantité :</label>
+      <select class="quantity" data-name="Tape à Bâton" data-type="baton">
+        <option value="4" data-price="12">Paquet de 4 - 12$</option>
+        <option value="6" data-price="22">Paquet de 6 - 22$</option>
+        <option value="12" data-price="35">Paquet de 12 - 35$</option>
+      </select>
+      <button class="add-to-cart">Ajouter au panier</button>
+    </section>
 
-      <div class="product">
-        <h3>Grip Tape (Couleurs)</h3>
-        <p>Disponible en rouge, bleu, vert, jaune.</p>
-        <p class="price">6.99 $</p>
-        <button onclick="addToCart('Grip Tape Couleurs', 6.99)">Ajouter au panier</button>
-      </div>
+    <section class="product">
+      <h2>Grip Tape</h2>
+      <label>Couleur :</label>
+      <select class="color">
+        <option value="noir">Noir</option>
+        <option value="blanc">Blanc</option>
+        <option value="rouge">Rouge</option>
+        <option value="bleu">Bleu</option>
+        <option value="vert">Vert</option>
+        <option value="jaune">Jaune</option>
+        <option value="rose">Rose</option>
+      </select>
+      <label>Quantité :</label>
+      <select class="quantity" data-name="Grip Tape" data-type="grip">
+        <option value="4" data-price="15">Paquet de 4 - 15$</option>
+        <option value="6" data-price="25">Paquet de 6 - 25$</option>
+        <option value="12" data-price="35">Paquet de 12 - 35$</option>
+      </select>
+      <button class="add-to-cart">Ajouter au panier</button>
+    </section>
 
-      <div class="product">
-        <h3>Tape à Bâton (Blanc)</h3>
-        <p>Classique et indispensable pour tout joueur.</p>
-        <p class="price">3.99 $</p>
-        <button onclick="addToCart('Tape à Bâton Blanc', 3.99)">Ajouter au panier</button>
-      </div>
-    </div>
+    <section id="cart">
+      <h2>Panier</h2>
+      <ul id="cart-items"></ul>
+      <p>Total : <span id="total">0</span>$</p>
+      <button id="checkout">Payer</button>
+    </section>
   </main>
-
-  <footer>
-    <p>© 2025 Hockey Store - Tous droits réservés.</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
